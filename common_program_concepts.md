@@ -49,3 +49,49 @@ let spaces = spaces.len();
 // let mut spaces = "   ";
 // spaces = spaces.len();
 ```
+## 数据类型
+Rust 是 静态类型语言，即在编译时就必须知道所有变量的类型。根据值及其使用方式，编译器通常可以推断出我们想要用的类型。当多种类型均有可能时，必须增加类型注解，如下
+```rust
+let guess: u32 = "42".parse().expect("Not a number!");
+```
+### 标量类型
+- 整型（默认i32）
+isize 和 usize 类型依赖运行程序的计算机架构：64 位架构上它们是 64 位的， 32 位架构上它们是 32 位的。
+
+长度 | 有符号 | 无符号
+:-:|:-:|:-:
+8-bit  | i8   | u8
+16-bit | i16  | u16
+32-bit | i32  | u32
+64-bit | i64  | u64
+arch | isize  | usize
+
+- 浮点型（f32 和 f64 , 默认 f64）
+- 布尔型（true 和 false）
+- 字符类型
+Rust 的 char 类型代表了一个 Unicode 标量值，在 Rust 中，拼音字母，中文、日文、韩文等字符，emoji（绘文字）以及零长度的空白字符都是有效的 char 值。
+
+### 复合类型
+- tuple 元组
+```rust
+fn main() {
+    let tup = (500, 6.4, 1);
+    // let tup: (i32, f64, u8) = (500, 6.4, 1);
+    
+    // 解构
+    let (x, y, z) = tup;
+
+    println!("The value of y is: {}", y);
+
+    println!("The value of x is: {}", tup.0)
+}
+```
+- 数组
+```rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+
+    let first = a[0];
+    let second = a[1];
+}
+```
