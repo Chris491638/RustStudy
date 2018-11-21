@@ -95,3 +95,27 @@ fn main() {
     let second = a[1];
 }
 ```
+## 函数
+```rust
+fn main() {
+    let x = plus_one(5);
+
+    println!("The value of x is: {}", x);
+}
+
+fn plus_one(x: i32) -> i32 {
+    // x + 1 是表达式，有返回值
+    // x + 1; 是语句没有返回值
+    x + 1
+}
+```
+## 循环
+```rust
+fn main() {
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a.iter() {
+        println!("the value is: {}", element);
+    }
+}
+```
