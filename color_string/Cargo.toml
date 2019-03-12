@@ -1,0 +1,7 @@
+[package]
+name = "color_string"
+version = "0.1.0"
+authors = ["chris <chris940406@gmail.com>"]
+edition = "2018"
+
+[dependencies]
